@@ -1,0 +1,51 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    // LINK ./webpack.config.js#path-alias
+    "paths": {
+      // SECTION Home module
+      // NOTE Application
+      "@home/application": ["./src/pages/home/application"],
+      "@home/application/*": ["./src/pages/home/application/*"],
+
+      "@home/style/*": ["./src/pages/home/assets/styles/*"],
+
+      // NOTE Domain/constant
+      "@home/domain/constant": ["./src/pages/home/domain/constant"],
+      "@home/domain/constant/*": ["./src/pages/home/domain/constant/*"],
+
+      // NOTE Domain/entity
+      "@home/domain/entity": ["./src/pages/home/domain/entity"],
+      "@home/domain/entity/*": ["./src/pages/home/domain/entity/*"],
+
+      // NOTE Domain/repository
+      "@home/domain/repository": ["./src/pages/home/domain/repository"],
+      "@home/domain/repository/*": ["./src/pages/home/domain/repository/*"],
+
+      // NOTE Domain/selector
+      "@home/domain/selector": ["./src/pages/home/domain/selector"],
+      "@home/domain/selector/*": ["./src/pages/home/domain/selector/*"],
+
+      // NOTE Domain
+      "@home/domain": ["./src/pages/home/domain"],
+      "@home/domain/*": ["./src/pages/home/domain/*"],
+
+      // NOTE Infrastructure
+      "@home/infrastructure/entity": ["./src/pages/home/infrastructure/entity"],
+      "@home/infrastructure/entity/*": [
+        "./src/pages/home/infrastructure/entity/*"
+      ],
+      "@home/infrastructure": ["./src/pages/home/infrastructure"],
+      "@home/infrastructure/*": ["./src/pages/home/infrastructure/*"],
+
+      // !SECTION
+      "@redux-store/*": ["./src/store/*"]
+    },
+    "jsx": "react-jsx",
+    "declarationDir": "dist",
+    "typeRoots": ["node_modules/@types", "node_modules/@sinbad/mf-types"]
+  },
+  "files": ["src/sinbad-mf-sample-workspace.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}
