@@ -38,6 +38,14 @@
       "@home/infrastructure": ["./src/pages/home/infrastructure"],
       "@home/infrastructure/*": ["./src/pages/home/infrastructure/*"],
 
+      // NOTE Presentation/component
+      "@home/component/product-table": [
+        "./src/pages/home/presentation/components/product-table"
+      ],
+      "@home/component/product-table/*": [
+        "./src/pages/home/presentation/components/product-table/*"
+      ],
+
       // !SECTION
       "@redux-store/*": ["./src/store/*"]
     },
