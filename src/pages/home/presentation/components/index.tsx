@@ -1,17 +1,26 @@
+import { useBreadcrumb } from "@sinbad/mf-react-component";
 import { FC } from "react";
+import { useRouteMatch } from "react-router-dom";
 
 const HomePage: FC = () => {
-  return (
-    <section
-      className="bg-white overflow-y-auto space-y-8"
-      style={{ padding: "16px", height: "inherit" }}
-    >
-      <h1 className="snb-h1">Boilerplate</h1>
+  const { BreadcrumbConfig } = useBreadcrumb("Dashboard");
+  const { path } = useRouteMatch();
 
-      <section>
-        <h2 className="snb-h2">Blank Page</h2>
-      </section>
-    </section>
+  return (
+    <div className="h-full flex flex-col gap-y-16px">
+      <BreadcrumbConfig
+        items={[
+          {
+            link: path,
+            label: "Dashboard",
+          },
+          {
+            link: path,
+            label: "Products",
+          },
+        ]}
+      ></BreadcrumbConfig>
+    </div>
   );
 };
 
