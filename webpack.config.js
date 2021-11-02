@@ -69,6 +69,18 @@ module.exports = (webpackConfigEnv, argv) => {
           __dirname,
           "./src/pages/home/presentation/components/product-table/"
         ),
+
+        // NOTE Presentation/event
+        "@home/event": resolve(
+          __dirname,
+          "./src/pages/home/presentation/event/"
+        ),
+
+        // NOTE Presentation/state
+        "@home/state": resolve(
+          __dirname,
+          "./src/pages/home/presentation/state/"
+        ),
         // !SECTION
       },
     },

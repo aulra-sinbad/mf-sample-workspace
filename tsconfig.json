@@ -46,6 +46,14 @@
         "./src/pages/home/presentation/components/product-table/*"
       ],
 
+      // NOTE Presentation/event
+      "@home/event": ["./src/pages/home/presentation/event"],
+      "@home/event/*": ["./src/pages/home/presentation/event/*"],
+
+      // NOTE Presentation/state
+      "@home/state": ["./src/pages/home/presentation/state"],
+      "@home/state/*": ["./src/pages/home/presentation/state/*"],
+
       // !SECTION
       "@redux-store/*": ["./src/store/*"]
     },
