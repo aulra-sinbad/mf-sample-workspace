@@ -15,7 +15,10 @@ export const fetchProductList = createAsyncThunk<
       headers: {
         "X-Seller-ID": 1,
       },
-      params,
+      params: {
+        ...params,
+        keyword: params?.keyword || null,
+      },
     });
 
     return res;

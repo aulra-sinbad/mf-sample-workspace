@@ -1,4 +1,5 @@
 import { productStateKey } from "@home/domain/constant";
+import { ProductEntityState } from "@home/domain/entity";
 import {
   fetchProductsFailure,
   fetchProductsRequest,
@@ -8,7 +9,12 @@ import { productAdapter } from "@home/domain/selector";
 import { fetchProductList } from "@home/infrastructure/thunk";
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = productAdapter.getInitialState();
+const initialState: ProductEntityState = productAdapter.getInitialState({
+  error: null,
+  loading: false,
+  refresh: false,
+  total: 0,
+});
 
 /** NOTE
  * createSlice

@@ -6,8 +6,8 @@ import { productAdapter } from "../selector";
 export const fetchProductsRequest: CaseReducer<ProductEntityState> = (
   state
 ) => {
-  if (!state.loading) {
-    state.loading = false;
+  if (state.loading === false) {
+    state.loading = true;
   }
 };
 

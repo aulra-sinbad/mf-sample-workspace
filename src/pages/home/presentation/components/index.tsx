@@ -1,6 +1,7 @@
 import { useBreadcrumb } from "@sinbad/mf-react-component";
 import { FC } from "react";
 import { useRouteMatch } from "react-router-dom";
+import { ProductListPage } from "./product-list";
 
 const HomePage: FC = () => {
   const { BreadcrumbConfig } = useBreadcrumb("Dashboard");
@@ -19,7 +20,9 @@ const HomePage: FC = () => {
             label: "Products",
           },
         ]}
-      ></BreadcrumbConfig>
+      >
+        <ProductListPage />
+      </BreadcrumbConfig>
     </div>
   );
 };
